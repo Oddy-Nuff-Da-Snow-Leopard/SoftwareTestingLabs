@@ -61,11 +61,10 @@ public class LufthansaWebTest {
 
         new WebDriverWait(driver, SECONDS_TO_LOAD).until(ExpectedConditions.visibilityOfElementLocated(By.className("highlight")));
         assertTrue(driver.findElement(By.className("highlight")).getText().equals("No. of infants must be less or equal adults"));
-
-        @After
-        public void after
-        
-            () {
-        driver.close();
-        }
     }
+
+    @After
+    public void after() {
+        driver.close();
+    }
+}
