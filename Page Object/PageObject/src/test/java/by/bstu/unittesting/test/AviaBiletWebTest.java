@@ -18,8 +18,8 @@ import java.util.Calendar;
 
 public class AviaBiletWebTest {
 
-    String NEXT_DAY_OF_MONTH = Integer.toString(Calendar.getInstance()
-            .get(Calendar.DAY_OF_MONTH) + 1);
+    private static final String NEXT_DAY_OF_MONTH
+            = Integer.toString(Calendar.getInstance().get(Calendar.DAY_OF_MONTH) + 1);
 
     private WebDriver driver;
 
