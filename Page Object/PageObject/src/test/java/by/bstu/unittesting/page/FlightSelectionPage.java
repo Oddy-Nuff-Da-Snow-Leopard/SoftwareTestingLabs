@@ -12,8 +12,7 @@ public class FlightSelectionPage extends Page {
     }
 
     public FlightSelectionPage selectFlight() {
-        waitUntilElementToBeClickable(SELECT_BUTTON_LOCATION);
-        driver.findElement(SELECT_BUTTON_LOCATION).click();
+        waitUntilElementToBeClickable(SELECT_BUTTON_LOCATION).click();
         return this;
     }
 }

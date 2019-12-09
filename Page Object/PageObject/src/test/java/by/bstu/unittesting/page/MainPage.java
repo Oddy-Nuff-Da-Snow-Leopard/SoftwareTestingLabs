@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 
 public class MainPage extends Page {
 
+    private static final String PAGE_URL = "https://avia.bilet.by/";
+
     private static final By ONEWAY_LABEL_LOCATION = By.className("flight-complexity__label");
 
     private static final By ORIGIN_INPUT_LOCATION = By.id("from_name");
@@ -15,12 +17,15 @@ public class MainPage extends Page {
 
     public MainPage(WebDriver driver) {
         super(driver);
-        driver.get("https://avia.bilet.by/");
+    }
+
+    public MainPage openPage() {
+        driver.navigate().to(PAGE_URL);
+        return this;
     }
 
     public MainPage selectOnewayRadioButton() {
-        waitUntilElementToBeClickable(ONEWAY_LABEL_LOCATION);
-        driver.findElement(ONEWAY_LABEL_LOCATION).click();
+        waitUntilElementToBeClickable(ONEWAY_LABEL_LOCATION).click();
         return this;
     }
 
@@ -43,8 +48,7 @@ public class MainPage extends Page {
     }
 
     public MainPage clickSearchButton() {
-        waitUntilElementToBeClickable(SEARCH_BUTTON_LOCATION);
-        driver.findElement(SEARCH_BUTTON_LOCATION).click();
+        waitUntilElementToBeClickable(SEARCH_BUTTON_LOCATION).click();
         return this;
     }
 }

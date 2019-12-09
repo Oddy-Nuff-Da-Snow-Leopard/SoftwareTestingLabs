@@ -33,26 +33,22 @@ public class BookingPage extends Page {
     }
 
     public BookingPage typeEmail(String email) {
-        waitUntilPresenceOfElement(EMAIL_INPUT_LOCATION);
-        driver.findElement(EMAIL_INPUT_LOCATION).sendKeys(email);
+        waitUntilPresenceOfElement(EMAIL_INPUT_LOCATION).sendKeys(email);
         return this;
     }
 
     public BookingPage typePassword(String password) {
-        waitUntilPresenceOfElement(EMAIL_INPUT_LOCATION);
-        driver.findElement(PASSWORD_INPUT_LOCATION).sendKeys(password);
+        waitUntilPresenceOfElement(PASSWORD_INPUT_LOCATION).sendKeys(password);
         return this;
     }
 
     public BookingPage clickLoginButton() {
-        waitUntilElementToBeClickable(LOGIN_BUTTON_LOCATION);
-        driver.findElement(LOGIN_BUTTON_LOCATION).click();
+        waitUntilElementToBeClickable(LOGIN_BUTTON_LOCATION).click();
         return this;
     }
 
     public BookingPage selectGender() {
-        waitUntilElementToBeClickable(GENDER_LABEL_LOCATION);
-        driver.findElement(GENDER_LABEL_LOCATION).click();
+        waitUntilElementToBeClickable(GENDER_LABEL_LOCATION).click();
         return this;
     }
 
@@ -86,13 +82,11 @@ public class BookingPage extends Page {
     }
 
     public BookingPage clickBookTicketButton() {
-        waitUntilElementToBeClickable(BOOK_TICKET_BUTTON_LOCATION);
-        driver.findElement(BOOK_TICKET_BUTTON_LOCATION).click();
+        waitUntilElementToBeClickable(BOOK_TICKET_BUTTON_LOCATION).click();
         return this;
     }
 
     public String getErrorText() {
-        waitUntilPresenceOfElement(ERROR_FIELD_LOCATION);
-        return driver.findElement(ERROR_FIELD_LOCATION).getText();
+        return waitUntilPresenceOfElement(ERROR_FIELD_LOCATION).getText();
     }
 }

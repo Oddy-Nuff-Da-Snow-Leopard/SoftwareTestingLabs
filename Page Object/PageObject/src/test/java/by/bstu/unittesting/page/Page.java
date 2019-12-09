@@ -2,6 +2,7 @@ package by.bstu.unittesting.page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -18,15 +19,13 @@ public class Page {
         this.driver = driver;
     }
 
-    protected void waitUntilElementToBeClickable(By locator) {
-        new WebDriverWait(driver, SECONDS_TO_LOAD)
-                .until(ExpectedConditions
-                        .elementToBeClickable(locator));
+    protected WebElement waitUntilElementToBeClickable(By locator) {
+        return new WebDriverWait(driver, SECONDS_TO_LOAD)
+                .until(ExpectedConditions.elementToBeClickable(locator));
     }
 
-    protected void waitUntilPresenceOfElement(By locator) {
-        new WebDriverWait(driver, SECONDS_TO_LOAD)
-                .until(ExpectedConditions
-                        .presenceOfElementLocated(locator));
+    protected WebElement waitUntilPresenceOfElement(By locator) {
+        return new WebDriverWait(driver, SECONDS_TO_LOAD)
+                .until(ExpectedConditions.presenceOfElementLocated(locator));
     }
 }

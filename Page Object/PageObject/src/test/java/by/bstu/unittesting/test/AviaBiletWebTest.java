@@ -34,7 +34,7 @@ public class AviaBiletWebTest {
     @Test
     public void testBookingTicketWithoutIndicatingPassportData() {
 
-        MainPage mainPage = new MainPage(driver)
+        MainPage mainPage = new MainPage(driver).openPage()
                 .selectOnewayRadioButton()
                 .typeOrigin("Москва")
                 .typeDestination("Санкт-Петербург")
@@ -61,7 +61,7 @@ public class AviaBiletWebTest {
     @Test
     public void testEnteringWrongCardNumberWhenPaying() throws InterruptedException {
 
-        MainPage mainPage = new MainPage(driver)
+        MainPage mainPage = new MainPage(driver).openPage()
                 .selectOnewayRadioButton()
                 .typeOrigin("Москва")
                 .typeDestination("Санкт-Петербург")
