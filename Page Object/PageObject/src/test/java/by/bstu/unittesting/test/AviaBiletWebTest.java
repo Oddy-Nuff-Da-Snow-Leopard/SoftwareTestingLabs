@@ -59,7 +59,7 @@ public class AviaBiletWebTest {
     }
 
     @Test
-    public void testEnteringWrongCardNumberWhenPaying() throws InterruptedException {
+    public void testEnteringWrongCardNumberWhenPaying() {
 
         MainPage mainPage = new MainPage(driver).openPage()
                 .selectOnewayRadioButton()
